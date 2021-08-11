@@ -10,7 +10,7 @@ services:
         - webapp-db
     webapp-db:
         image: mariadb
-        environments:
+        environment:
           MYSQL_ROOT_PASSWORD: arla1983
           MYSQL_DATABASE: docker
         volumes:
