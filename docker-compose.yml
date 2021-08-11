@@ -6,7 +6,7 @@ services:
         ports:
         - "8001:80"
         volumes:
-        - mademi_webapp:/usr/share/httpd/noindex:rw
+        - webapp:/usr/share/httpd/noindex:rw
         depends_on:
         - webapp-db
     webapp-db:
@@ -16,10 +16,10 @@ services:
           MYSQL_ROOT_PASSWORD: arla1983
           MYSQL_DATABASE: docker
         volumes:
-        - mademi_webapp-db:/var/lib/mysql:rw
+        - webapp-db:/var/lib/mysql:rw
 volumes:
-    webapp: {}
-    webapp-db: {}
+    mademi_webapp: {}
+    mademi_webapp-db: {}
 
 
 
