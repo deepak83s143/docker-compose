@@ -2,7 +2,7 @@ version: "3"
 services:
   web:
     image: ubuntu/apache2
-    container_name: web1y
+    container_name: web1
     ports:
     - "8005:80"
     volumes:
