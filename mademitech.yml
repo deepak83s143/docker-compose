@@ -14,6 +14,9 @@ services:
     container_name: db
     volumes:
     - db:/var/lib/mysql:rw
+    environment:
+      MYSQL_ROOT_PASSWORD: arla1983
+      MYSQL_DATABASE: docker
 volumes:
   web: {}
   db: {}  
