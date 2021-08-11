@@ -5,7 +5,7 @@ services:
         ports:
         - "8001:80"
         volumes:
-        - webapp: /var/www/html/
+        - webapp:/var/www/html:rw
         depends_on:
         - webapp-db
     webapp-db:
@@ -14,7 +14,7 @@ services:
           MYSQL_ROOT_PASSWORD: arla1983
           MYSQL_DATABASE: docker
         volumes:
-        - webapp-db: /var/lib/mysql
+        - webapp-db:/var/lib/mysql:rw
 volumes:
     webapp: {}
     webapp-db: {}
