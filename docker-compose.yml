@@ -1,21 +1,20 @@
 version: "3"
 services:
     webapp:
-	image:centos/httpd
-	ports:
-	- "8001:80"
-	volumes:
-	- webapp:/var/www/html/
-	depends_on:
-	- webapp-db
+        image: centos/httpd
+        ports:
+        - "8001:80"
+        volumes:
+        - webapp: /var/www/html/
+        depends_on:
+        - webapp-db
     webapp-db:
-	image:mariadb
-	environments:
-	  MYSQL_ROOT_PASSWORD: arla1983
-	  MYSQL_DATABASE: docker
-	volumes:
-	- webapp-db:/var/lib/mysql
+        image: mariadb
+        environments:
+          MYSQL_ROOT_PASSWORD: arla1983
+          MYSQL_DATABASE: docker
+        volumes:
+        - webapp-db: /var/lib/mysql
 volumes:
-    webapp: {}
-    webapp-db: {}	
-
+    webapp:
+    webapp-db:
