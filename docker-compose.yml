@@ -1,12 +1,10 @@
 version: "3"
 services:
     webapp:
-        image: centos/httpd
+        image: devopstrainer/deploy:webapp
         container_name: webapp
         ports:
         - "8001:80"
-        volumes:
-        - webapp:/usr/share/httpd/noindex:rw
         depends_on:
         - webapp-db
     webapp-db:
@@ -15,13 +13,3 @@ services:
         environment:
           MYSQL_ROOT_PASSWORD: arla1983
           MYSQL_DATABASE: docker
-        volumes:
-        - webapp-db:/var/lib/mysql:rw
-volumes:
-    webapp: {}
-    webapp-db: {}
-
-
-
-
-
