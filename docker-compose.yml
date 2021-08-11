@@ -18,8 +18,8 @@ services:
         volumes:
         - mademi_webapp-db:/var/lib/mysql:rw
 volumes:
-    webapp: {}
-    webapp-db: {}
+    mademi_webapp: {}
+    mademi_webapp-db: {}
 
 
 
