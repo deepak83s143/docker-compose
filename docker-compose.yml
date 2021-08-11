@@ -16,5 +16,5 @@ services:
         volumes:
         - webapp-db: /var/lib/mysql
 volumes:
-    webapp:
-    webapp-db:
+    webapp: {}
+    webapp-db: {}
