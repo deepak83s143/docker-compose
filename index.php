@@ -1,13 +1,13 @@
-<html>
+]<html>
 <head>
 <title>Docker Sample App</title>
 
 <?php
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
-$servername = "db";
+$servername = "172.18.0.2";
 $username = "root";
-$password = "example";
+$password = "arla1983";
 $dbname = "docker";
 $name=$_POST["name"];
 $phone=$_POST["phone"];
