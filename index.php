@@ -13,6 +13,7 @@ $password = "arla1983";
 $dbname = "docker";
 $name=$_POST["name"];
 $phone=$_POST["phone"];
+$address=$_POST["address"];
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -20,8 +21,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO emp (name, phone)
-VALUES ('".$name."', '".$phone."')";
+$sql = "INSERT INTO emp (name, phone, address)
+VALUES ('".$name."', '".$phone.", ".$address"')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
@@ -37,6 +38,7 @@ $conn->close();
         <form action="index.php" method="POST">
                 <input type="text" name="name">
                 <input type="text" name="phone">
+                <input type="text" name="address">
                 <input type="submit" name="submit">
         </form>
 </body>
