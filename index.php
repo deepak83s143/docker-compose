@@ -3,7 +3,6 @@
 <html>
 <head>
 <title>Docker Sample App</title>
-
 <?php
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
@@ -22,7 +21,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO emp (name, phone, address)
-VALUES ('".$name."', '".$phone.", ".$address"')";
+VALUES ('".$name."', '".$phone."', '".$address."')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
